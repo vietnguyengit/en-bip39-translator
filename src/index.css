@@ -1,0 +1,43 @@
+/* index.css */
+
+/* Reset some default styling and apply box-sizing border-box globally */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set default font family and background color */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5; /* Light grey background for a modern flat design */
+    color: #333;  /* Dark color for better readability */
+    line-height: 1.6; /* Improved line height */
+  }
+  
+  /* General link styling */
+  a {
+    color: #00796b;  /* Link color matching the primary theme color */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Container for centering content */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* Utility classes */
+  .mt-2 {
+    margin-top: 1rem;
+  }
+  
+  .mt-4 {
+    margin-top: 2rem;
+  }
+  
