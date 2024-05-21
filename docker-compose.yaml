@@ -4,5 +4,5 @@ services:
   bip39-translator:
     build: .
     ports:
-      - "8088:8080"
+      - "8080:8080"
     container_name: bip39-translator
