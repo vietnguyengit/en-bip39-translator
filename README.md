@@ -23,7 +23,7 @@
     docker run -d -p 8080:8080 bip39-translator
     ```
 
-4. Open your browser and navigate to `http://localhost:5173` to see the running application.
+4. Open your browser and navigate to `http://localhost:8080` to see the running application.
 
 #### Using Docker Compose
 
@@ -58,7 +58,7 @@ If you want to develop or modify the application locally:
     npm run dev
     ```
 
-3. Open your browser and navigate to `http://localhost:3000` to see the running application.
+3. Open your browser and navigate to `http://localhost:5173` to see the running application.
 
 ## License
 
