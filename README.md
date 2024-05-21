@@ -60,6 +60,23 @@ If you want to develop or modify the application locally:
 
 3. Open your browser and navigate to `http://localhost:5173` to see the running application.
 
+
+### Code Formatting
+
+To format your code using Prettier, you can use the following commands:
+
+- **Format code:**
+
+    ```sh
+    npm run format
+    ```
+
+- **Check code formatting:**
+
+    ```sh
+    npm run format-check
+    ```
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
