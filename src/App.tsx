@@ -1,5 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Container, TextField, Typography, Box, Paper, IconButton, CssBaseline } from '@mui/material';
+import {
+  Container,
+  TextField,
+  Typography,
+  Box,
+  Paper,
+  IconButton,
+  CssBaseline,
+} from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import './App.css';
@@ -31,7 +39,8 @@ const App: React.FC = () => {
   const [wordsList, setWordsList] = useState<string[]>([]);
   const [result, setResult] = useState<string>('');
   const [resultLabel, setResultLabel] = useState<string>('');
-  const sourceURL = 'https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt';
+  const sourceURL =
+    'https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt';
   const repoURL = 'https://github.com/vietnguyengit/en-bip39-translator';
 
   useEffect(() => {
@@ -72,7 +81,9 @@ const App: React.FC = () => {
       }
       if (/^[a-zA-Z]+$/.test(value)) {
         const lineNumber = wordMap[value.toLowerCase()]; // Convert input to lowercase
-        setResult(lineNumber !== undefined ? padWithZeros(lineNumber, 4) : 'Not found');
+        setResult(
+          lineNumber !== undefined ? padWithZeros(lineNumber, 4) : 'Not found',
+        );
         setResultLabel('BIP39 digits:');
       } else if (/^\d+$/.test(value)) {
         const index = parseInt(value, 10) - 1;
@@ -84,7 +95,7 @@ const App: React.FC = () => {
         setResultLabel('');
       }
     }, 300),
-    [wordMap, wordsList]
+    [wordMap, wordsList],
   );
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -97,7 +108,10 @@ const App: React.FC = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container maxWidth="sm">
-        <Paper elevation={3} style={{ padding: '2em', marginTop: '2em', textAlign: 'center' }}>
+        <Paper
+          elevation={3}
+          style={{ padding: '2em', marginTop: '2em', textAlign: 'center' }}
+        >
           <Typography variant="h4" component="h1" gutterBottom>
             BIP39/English recovery seed words translator
           </Typography>
@@ -118,15 +132,27 @@ const App: React.FC = () => {
           )}
           <Box marginTop={4}>
             <Typography variant="body2" color="textSecondary">
-              Data source: <a href={sourceURL} target="_blank" rel="noopener noreferrer">{sourceURL}</a>
+              Data source:{' '}
+              <a href={sourceURL} target="_blank" rel="noopener noreferrer">
+                {sourceURL}
+              </a>
             </Typography>
           </Box>
           <Box marginTop={2} textAlign="center">
-            <IconButton href={repoURL} target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+            <IconButton
+              href={repoURL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Repository"
+            >
               <GitHubIcon fontSize="large" />
-            <Typography variant="body2" color="textSecondary" style={{ display: 'inline', marginLeft: '0.5rem' }}>
-              Source Code
-            </Typography>
+              <Typography
+                variant="body2"
+                color="textSecondary"
+                style={{ display: 'inline', marginLeft: '0.5rem' }}
+              >
+                Source Code
+              </Typography>
             </IconButton>
           </Box>
         </Paper>
