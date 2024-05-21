@@ -26,8 +26,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "16" # Adjust the Node.js version as needed
-
+          node-version: "20"
+          
       - name: Install dependencies
         run: |
           npm install
@@ -36,7 +36,7 @@ jobs:
         run: npm run build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist # Ensure this matches the output directory of your Vite build
 
