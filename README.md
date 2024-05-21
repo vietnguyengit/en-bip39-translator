@@ -1,5 +1,7 @@
 # BIP39/English Recovery Seed Words Translator
 
+![2024-05-21_20-26-21-ezgif com-video-to-gif-converter](https://github.com/vietnguyengit/en-bip39-translator/assets/26201635/7dfe4c8a-3e9e-4552-8015-8ea0665ccf23)
+
 ### Building and Running the Docker Container
 
 #### Using Docker
